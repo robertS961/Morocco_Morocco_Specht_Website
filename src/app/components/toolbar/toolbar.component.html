@@ -1,1 +1,20 @@
-<p>toolbar works!</p>
+<p>
+    <mat-toolbar class = "toolbarClass">
+      <button mat-icon-button [matMenuTriggerFor] = "menu" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-menu #menu = "matMenu" >
+            <button mat-menu-item class = "matMenuClass" >Home </button>
+            <button mat-menu-item class = "matMenuClass">The Firm</button>
+            <button mat-menu-item class = "matMenuClass">Practice Areas</button>
+            <button mat-menu-item class = "matMenuClass">Locations</button>
+            <button mat-menu-item class = "matMenuClass">Contact</button>
+        </mat-menu>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class = "flexExpand">Morocco Morocco and Specht</span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+      </button>
+    </mat-toolbar>
+</p>
+
+  

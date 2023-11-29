@@ -1,0 +1,15 @@
+.flexExpand{
+    flex: 1 1 auto;
+  }
+.toolbarClass{
+    color:white;
+    background: black;
+}
+.matMenuClass{
+    color:white;
+    background: black; 
+}
+.matMenuClass:hover{
+    color:  black;
+  }
+
