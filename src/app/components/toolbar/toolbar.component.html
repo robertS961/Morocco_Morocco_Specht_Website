@@ -1,1 +1,26 @@
-<p>toolbar works!</p>
+<p>
+    <mat-toolbar class = "toolbarClass">
+      <button mat-icon-button [matMenuTriggerFor] = "menu" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-menu #menu = "matMenu" >
+            <button mat-menu-item class = "matMenuClass" >Home </button>
+            <button mat-menu-item class = "matMenuClass">The Firm</button>
+            <button mat-menu-item class = "matMenuClass">Practice Areas</button>
+            <button mat-menu-item class = "matMenuClass">Locations</button>
+            <button mat-menu-item class = "matMenuClass">Contact</button>
+        </mat-menu>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button class = "roundCorners" mat-raised-button>Morocco Morocco and Specht</button>
+      <span class ="spacer"></span>
+      <button  mat-mini-fab class = "matButtonClass">
+        <mat-icon >facebook</mat-icon>
+      </button>
+      <button  mat-mini-fab class = "matButtonClass" (click) = "openSnackBar()">
+        <mat-icon>phone</mat-icon>
+      </button>
+    </mat-toolbar>
+</p>
+
+
+
+  
