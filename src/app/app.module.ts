@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,18 +21,17 @@ import {
   MatDialogContent,
   MatDialogActions,
   MatDialogClose,
+  MatDialogModule
 } from '@angular/material/dialog';
 
 import {FormsModule} from '@angular/forms';
-
-
-
-
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    PhonePopUpComponent
+    PhonePopUpComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +44,14 @@ import {FormsModule} from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
+    MatDialogModule,
   ],
-  providers: [MatSnackBar,
-  MatDialog,
+  providers: [
+    MatSnackBar,
+    MatDialog,
+    ContactFormComponent,
+    PhonePopUpComponent,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
