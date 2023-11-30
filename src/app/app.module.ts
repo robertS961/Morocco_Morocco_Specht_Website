@@ -12,13 +12,27 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { PhonePopUpComponent } from './components/phone-pop-up/phone-pop-up.component';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+} from '@angular/material/dialog';
+
+import {FormsModule} from '@angular/forms';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    PhonePopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +44,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-
-
-
+    FormsModule,
   ],
-  providers: [MatSnackBar],
+  providers: [MatSnackBar,
+  MatDialog,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

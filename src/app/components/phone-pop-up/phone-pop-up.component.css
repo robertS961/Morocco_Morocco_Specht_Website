@@ -1,0 +1,10 @@
+.changeColor{
+    background: black;
+    color: white;
+    position:absolute; 
+    margin-left:-50px;
+    left:30%;
+    width:700px;
+    bottom:0px;
+    border-radius: 10px;
+}
