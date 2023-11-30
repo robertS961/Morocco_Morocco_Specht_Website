@@ -9,6 +9,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -25,9 +28,13 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+
+
 
   ],
-  providers: [],
+  providers: [MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

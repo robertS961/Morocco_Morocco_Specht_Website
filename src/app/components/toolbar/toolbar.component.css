@@ -1,6 +1,6 @@
-.flexExpand{
+.spacer{
     flex: 1 1 auto;
-  }
+}
 .toolbarClass{
     color:white;
     background: black;
@@ -9,7 +9,22 @@
     color:white;
     background: black; 
 }
+.matButtonClass{
+    background: white;
+    color: black;
+}
+.matButtonClass:hover{
+    background: gray;
+}
 .matMenuClass:hover{
     color:  black;
   }
+.roundCorners{
+    border-radius: 25px;
+}
+.awesome-snackbar{
+    background: red;
+    color: green;
+
+}
 

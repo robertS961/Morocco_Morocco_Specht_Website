@@ -10,11 +10,17 @@
         </mat-menu>
         <mat-icon>menu</mat-icon>
       </button>
-      <span class = "flexExpand">Morocco Morocco and Specht</span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>home</mat-icon>
+      <button class = "roundCorners" mat-raised-button>Morocco Morocco and Specht</button>
+      <span class ="spacer"></span>
+      <button  mat-mini-fab class = "matButtonClass">
+        <mat-icon >facebook</mat-icon>
+      </button>
+      <button  mat-mini-fab class = "matButtonClass" (click) = "openSnackBar()">
+        <mat-icon>phone</mat-icon>
       </button>
     </mat-toolbar>
 </p>
+
+
 
   
