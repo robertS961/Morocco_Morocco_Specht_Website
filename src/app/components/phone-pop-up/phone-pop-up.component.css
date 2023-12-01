@@ -1,9 +1,12 @@
 .changeColor{
-    background: black;
-    color: white;
-    position: bottom; 
-    margin:50px;
     width:700px;
-    bottom:0px;
     border-radius: 10px;
+    border: black 4px solid;
+   
+}
+
+.center{
+    position:absolute;
+    bottom: 0%;
+    right:25%;
 }
