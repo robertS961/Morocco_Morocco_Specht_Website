@@ -24,7 +24,7 @@ import {
   MatDialogModule
 } from '@angular/material/dialog';
 
-import {FormsModule} from '@angular/forms';
+import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 @NgModule({
   declarations: [
@@ -45,6 +45,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     MatInputModule,
     FormsModule,
     MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [
     MatSnackBar,

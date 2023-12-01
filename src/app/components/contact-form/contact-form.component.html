@@ -1,1 +1,44 @@
-<p>contact-form works!</p>
+<div class = "mainForm">
+    <h1 class="center">Talk with Our Attorneys Today!</h1>
+    <br>
+    <form [formGroup]="reactiveForm" (ngSubmit) = "onSubmit()">
+    <div>
+       <label for="name">First Name</label>
+       <br>
+       <input type="text" class = "inputForm" id="firstName" placeholder ="Rachel" formControlName = "firstName">
+    </div>
+    <br>
+    <div>
+        <label for="name">Last Name</label>
+        <br>
+        <input type="text" class = "inputForm" id="lastName" placeholder ="Morocco" formControlName = "lastName">
+     </div>
+     <br>
+    <div> 
+       <label for="name">Email Address</label>
+       <br>
+       <input type="text" class = "inputForm" id="emailaddress" placeholder ="MMS@gmail.com" formControlName = "email">
+    </div>
+    <div>
+        <span style = "color: red" *ngIf = "!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> The email entered is not a valid email.</span>
+    </div>
+    <br>
+    <div>
+       <label for="name">Mobile Number</label>
+       <br>
+       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="999 999 9999" formControlName = "phone">
+    </div>
+    <br>
+    <div>
+        <label for="name">Brief Description of the Case (Optional)</label>
+        <br>
+        <input  type="text" class = "inputForm" id="caseDescription" placeholder ="I need help with a DUI." formControlName = "description">
+     </div>
+     <br>
+    <div class="center">
+    <button mat-raised-button type="submit" class = "submitButton">Get in Contact</button>
+    </div>
+    </form>
+ </div>
+
+
