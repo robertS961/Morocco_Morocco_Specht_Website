@@ -1,40 +1,26 @@
 <div class = "mainForm">
-    <h1 class="center">Talk with Our Attorneys Today!</h1>
+    <h1 class="center">CONNECT WITH AN ATTORNEY!</h1>
     <br>
+    <h3>An attorney will review your case and get back to you within a few bussiness day.</h3>
     <form [formGroup]="reactiveForm" (ngSubmit) = "onSubmit()">
     <div>
-       <label for="name">First Name</label>
-       <br>
-       <input type="text" class = "inputForm" id="firstName" placeholder ="Rachel" formControlName = "firstName">
+       <input type="text" class = "inputForm" id="firstName" placeholder ="First Name" formControlName = "firstName">
     </div>
-    <br>
     <div>
-        <label for="name">Last Name</label>
-        <br>
-        <input type="text" class = "inputForm" id="lastName" placeholder ="Morocco" formControlName = "lastName">
+        <input type="text" class = "inputForm" id="lastName" placeholder ="Last Name" formControlName = "lastName">
      </div>
-     <br>
     <div> 
-       <label for="name">Email Address</label>
-       <br>
-       <input type="text" class = "inputForm" id="emailaddress" placeholder ="MMS@gmail.com" formControlName = "email">
+       <input type="text" class = "inputForm" id="emailaddress" placeholder ="Email" formControlName = "email">
     </div>
     <div>
         <span style = "color: red" *ngIf = "!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> The email entered is not a valid email.</span>
     </div>
-    <br>
     <div>
-       <label for="name">Mobile Number</label>
-       <br>
-       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="999 999 9999" formControlName = "phone">
+       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="Phone Number" formControlName = "phone">
     </div>
-    <br>
     <div>
-        <label for="name">Brief Description of the Case (Optional)</label>
-        <br>
-        <input  type="text" class = "inputForm" id="caseDescription" placeholder ="I need help with a DUI." formControlName = "description">
+        <textarea  type="text" class = "bigInputForm" id="caseDescription" placeholder ="Brief Case Description" formControlName = "description"></textarea>
      </div>
-     <br>
     <div class="center">
     <button mat-raised-button type="submit" class = "submitButton">Get in Contact</button>
     </div>
