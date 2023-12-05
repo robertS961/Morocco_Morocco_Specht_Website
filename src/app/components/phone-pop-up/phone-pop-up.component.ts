@@ -15,6 +15,9 @@ export class PhonePopUpComponent {
   constructor(public matDialog:MatDialog){} 
 
   openDialog(){
-    this.matDialog.open(ContactFormComponent);
+    this.matDialog.open(ContactFormComponent,{
+      width: '450px',
+
+    });
   }
 }
