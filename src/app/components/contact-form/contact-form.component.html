@@ -4,22 +4,32 @@
     <h3>An attorney will review your case and get back to you within a few bussiness day.</h3>
     <form [formGroup]="reactiveForm" (ngSubmit) = "onSubmit()">
     <div>
-       <input type="text" class = "inputForm" id="firstName" placeholder ="First Name" formControlName = "firstName">
+       
+       <input type="text" class = "inputForm" id="firstName" placeholder ="First Name" minlength="3" maxlength="20" formControlName = "firstName">
     </div>
     <div>
-        <input type="text" class = "inputForm" id="lastName" placeholder ="Last Name" formControlName = "lastName">
+        <span style = "color: red" *ngIf = "!reactiveForm.get('firstName').valid && reactiveForm.get('firstName').touched"> You must enter a first name.</span>
+    </div>
+    <div>
+        <input type="text" class = "inputForm" id="lastName" placeholder ="Last Name" minlength="3" maxlength="20" formControlName = "lastName">
+     </div>
+     <div>
+        <span style = "color: red" *ngIf = "!reactiveForm.get('lastName').valid && reactiveForm.get('lastName').touched"> You must enter a last name</span>
      </div>
     <div> 
-       <input type="text" class = "inputForm" id="emailaddress" placeholder ="Email" formControlName = "email">
+       <input type="text" class = "inputForm" id="emailaddress" placeholder ="Email" minlength="3" maxlength="20"  formControlName = "email">
     </div>
     <div>
         <span style = "color: red" *ngIf = "!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> The email entered is not a valid email.</span>
     </div>
     <div>
-       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="Phone Number" formControlName = "phone">
+       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="Phone Number" minlength="10" maxlength="24" formControlName = "phone">
     </div>
     <div>
-        <textarea  type="text" class = "bigInputForm" id="caseDescription" placeholder ="Brief Case Description" formControlName = "description"></textarea>
+        <span style = "color: red" *ngIf = "!reactiveForm.get('phone').valid && reactiveForm.get('phone').touched"> Please enter a valid phone number</span>
+    </div>
+    <div>
+        <textarea  type="text" class = "bigInputForm" id="caseDescription" placeholder ="Brief Case Description" minlength="0" maxlength="500"  formControlName = "description"></textarea>
      </div>
     <div class="center">
     <button mat-raised-button type="submit" class = "submitButton">Get in Contact</button>
