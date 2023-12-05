@@ -14,7 +14,11 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 export class PhonePopUpComponent {
   constructor(public matDialog:MatDialog){} 
 
-  openDialog(){
-    this.matDialog.open(ContactFormComponent);
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string){
+    this.matDialog.open(ContactFormComponent,{
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 }

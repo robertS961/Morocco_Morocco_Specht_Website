@@ -1,40 +1,36 @@
-<div class = "mainForm">
-    <h1 class="center">CONNECT WITH AN ATTORNEY!</h1>
-    <br>
-    <h3>An attorney will review your case and get back to you within a few bussiness day.</h3>
-    <form [formGroup]="reactiveForm" (ngSubmit) = "onSubmit()">
-    <div>
-       
-       <input type="text" class = "inputForm" id="firstName" placeholder ="First Name" minlength="3" maxlength="20" formControlName = "firstName">
-    </div>
-    <div>
-        <span style = "color: red" *ngIf = "!reactiveForm.get('firstName').valid && reactiveForm.get('firstName').touched"> You must enter a first name.</span>
-    </div>
-    <div>
-        <input type="text" class = "inputForm" id="lastName" placeholder ="Last Name" minlength="3" maxlength="20" formControlName = "lastName">
-     </div>
-     <div>
-        <span style = "color: red" *ngIf = "!reactiveForm.get('lastName').valid && reactiveForm.get('lastName').touched"> You must enter a last name</span>
-     </div>
-    <div> 
-       <input type="text" class = "inputForm" id="emailaddress" placeholder ="Email" minlength="3" maxlength="20"  formControlName = "email">
-    </div>
-    <div>
-        <span style = "color: red" *ngIf = "!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> The email entered is not a valid email.</span>
-    </div>
-    <div>
-       <input type="text" class = "inputForm" id="mobilenumber" placeholder ="Phone Number" minlength="10" maxlength="24" formControlName = "phone">
-    </div>
-    <div>
-        <span style = "color: red" *ngIf = "!reactiveForm.get('phone').valid && reactiveForm.get('phone').touched"> Please enter a valid phone number</span>
-    </div>
-    <div>
-        <textarea  type="text" class = "bigInputForm" id="caseDescription" placeholder ="Brief Case Description" minlength="0" maxlength="500"  formControlName = "description"></textarea>
-     </div>
-    <div class="center">
-    <button mat-raised-button type="submit" class = "submitButton">Get in Contact</button>
-    </div>
-    </form>
- </div>
 
+<button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+    <mat-icon> close </mat-icon>
+</button>
+<mat-dialog-content align = "center">
+    <header>
+        <h1>
+            Contact Us
+        </h1>
+    </header>
+    <p><mat-form-field class = "inputText">
+        <input matInput placeholder="Enter Your Full Name" [formControl] = "name" required>
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "name.invalid && name.touched"> You must enter your full name.</mat-hint>
+    </mat-form-field></p>
+    <p><mat-form-field class = "inputText">
+        <input matInput placeholder="Enter Your Email" [formControl] = "email" required>
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "email.invalid && email.touched"> You must enter a valid email.</mat-hint>
+    </mat-form-field></p>
+    <p><mat-form-field class = "inputText">
+        <input matInput placeholder="Enter Your Phone Number" minlength="10" maxlength = "24" [formControl] = "phone" required>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "phone.invalid && phone.touched"> You must enter your phone number</mat-hint>
+    </mat-form-field></p>
+    <p><mat-form-field hintLabel = "Max 500 characters" class = "inputText"> 
+        <textarea matInput #input maxlength = "500" placeholder="A Brief Description of the Case"></textarea>
+        <mat-icon matSuffix>save</mat-icon>
+        <mat-hint align = "end">{{input.value.length}}/500</mat-hint>
+    </mat-form-field></p>
+</mat-dialog-content>
+<mat-dialog-actions align = "end">
+    <button mat-raised-button color="primary">Submit</button>
+    <button mat-raised-button color="warn" matDialogClose>Cancel</button>
+</mat-dialog-actions>
 

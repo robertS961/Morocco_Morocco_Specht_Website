@@ -10,22 +10,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./contact-form.component.css']
 })
 
-export class ContactFormComponent implements OnInit {
-  title = 'ReactiveForms';
-  reactiveForm!: FormGroup;
-
-  ngOnInit(): void {
-    this.reactiveForm = new FormGroup({
-      firstName:  new FormControl(null, Validators.required),
-      lastName:  new FormControl(null, Validators.required),
-      phone:  new FormControl(null, Validators.required),
-      email:  new FormControl(null, [Validators.required, Validators.email]),
-      description:  new FormControl(null),
-
-    });
-  }
-  onSubmit(){
-
-  }
-
+export class ContactFormComponent{
+  email = new FormControl('', [Validators.required, Validators.email]);
+  phone = new FormControl('', [Validators.required]);
+  name = new FormControl('', [Validators.required]);
 }
