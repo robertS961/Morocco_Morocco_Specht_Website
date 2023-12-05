@@ -1,32 +1,36 @@
+
 <button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
     <mat-icon> close </mat-icon>
 </button>
-<mat-dialog-content>
+<mat-dialog-content align = "center">
     <header>
         <h1>
             Contact Us
         </h1>
     </header>
     <p><mat-form-field class = "inputText">
-        <input matInput placeholder="Enter Your Full Name">
+        <input matInput placeholder="Enter Your Full Name" [formControl] = "name" required>
         <mat-icon matSuffix>person</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "name.invalid && name.touched"> You must enter your full name.</mat-hint>
     </mat-form-field></p>
     <p><mat-form-field class = "inputText">
-        <input matInput placeholder="Enter Your Email">
+        <input matInput placeholder="Enter Your Email" [formControl] = "email" required>
         <mat-icon matSuffix>email</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "email.invalid && email.touched"> You must enter a valid email.</mat-hint>
     </mat-form-field></p>
     <p><mat-form-field class = "inputText">
-        <input matInput placeholder="Enter Your Phone Number">
+        <input matInput placeholder="Enter Your Phone Number" minlength="10" maxlength = "24" [formControl] = "phone" required>
         <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint style = "color: red" *ngIf = "phone.invalid && phone.touched"> You must enter your phone number</mat-hint>
     </mat-form-field></p>
-    <p><mat-form-field class = "inputText"> 
-        <textarea matInput placeholder="A Brief Description of the Case"></textarea>
+    <p><mat-form-field hintLabel = "Max 500 characters" class = "inputText"> 
+        <textarea matInput #input maxlength = "500" placeholder="A Brief Description of the Case"></textarea>
         <mat-icon matSuffix>save</mat-icon>
+        <mat-hint align = "end">{{input.value.length}}/500</mat-hint>
     </mat-form-field></p>
 </mat-dialog-content>
 <mat-dialog-actions align = "end">
     <button mat-raised-button color="primary">Submit</button>
     <button mat-raised-button color="warn" matDialogClose>Cancel</button>
 </mat-dialog-actions>
-
 

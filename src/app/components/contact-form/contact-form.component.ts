@@ -11,4 +11,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 
 export class ContactFormComponent{
+  email = new FormControl('', [Validators.required, Validators.email]);
+  phone = new FormControl('', [Validators.required]);
+  name = new FormControl('', [Validators.required]);
 }
