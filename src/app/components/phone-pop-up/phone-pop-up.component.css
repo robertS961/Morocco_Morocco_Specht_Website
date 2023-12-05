@@ -1,0 +1,12 @@
+.changeColor{
+    width:700px;
+    border-radius: 10px;
+    border: black 4px solid;
+   
+}
+
+.center{
+    position:absolute;
+    bottom: 0%;
+    right:25%;
+}
