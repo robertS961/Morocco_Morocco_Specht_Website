@@ -24,6 +24,9 @@ import {
   MatDialogModule
 } from '@angular/material/dialog';
 
+import { provideRouter } from '@angular/router';
+
+
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 @NgModule({
@@ -52,6 +55,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     MatDialog,
     ContactFormComponent,
     PhonePopUpComponent,
+    provideRouter([]),
+    
   ],
   bootstrap: [AppComponent],
 })
