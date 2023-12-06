@@ -33,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TheFirmComponent } from './components/the-firm/the-firm.component';
 import { PracticeAreasComponent } from './components/practice-areas/practice-areas.component';
 import { LocationsComponent } from './components/locations/locations.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { LocationsComponent } from './components/locations/locations.component';
     HomeComponent,
     TheFirmComponent,
     PracticeAreasComponent,
-    LocationsComponent
+    LocationsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
