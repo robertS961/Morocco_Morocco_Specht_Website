@@ -24,17 +24,25 @@ import {
   MatDialogModule
 } from '@angular/material/dialog';
 
-import { provideRouter } from '@angular/router';
+import { RouterModule, provideRouter } from '@angular/router';
 
 
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { HomeComponent } from './components/home/home.component';
+import { TheFirmComponent } from './components/the-firm/the-firm.component';
+import { PracticeAreasComponent } from './components/practice-areas/practice-areas.component';
+import { LocationsComponent } from './components/locations/locations.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     PhonePopUpComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    HomeComponent,
+    TheFirmComponent,
+    PracticeAreasComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +57,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     FormsModule,
     MatDialogModule,
     ReactiveFormsModule,
+    RouterModule,
+
   ],
   providers: [
     MatSnackBar,
