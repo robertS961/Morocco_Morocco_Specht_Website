@@ -1,0 +1,10 @@
+.specalities{
+    padding: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(211, 211, 211, .6);
+}
