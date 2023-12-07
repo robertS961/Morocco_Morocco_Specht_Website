@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,5 +16,8 @@ export class ToolbarComponent {
       panelClass:['awesome-snackbar'],
       verticalPosition: 'top'
     });
+  }
+  redirect(){
+    window.location.href = "https://www.facebook.com/"
   }
 }
