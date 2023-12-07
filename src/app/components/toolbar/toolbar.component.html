@@ -6,7 +6,6 @@
             <button mat-menu-item class = "matMenuClass" [routerLink] = "'TheFirm'">The Firm</button>
             <button mat-menu-item class = "matMenuClass" [routerLink] = "'PracticeAreas'">Practice Areas</button>
             <button mat-menu-item class = "matMenuClass" [routerLink] = "'Locations'" >Locations</button>
-            <button mat-menu-item class = "matMenuClass">Contact</button>
         </mat-menu>
         <mat-icon>menu</mat-icon>
       </button>
@@ -17,6 +16,9 @@
       </button>
       <button  mat-mini-fab class = "matButtonClass" (click) = "openSnackBar()">
         <mat-icon>phone</mat-icon>
+      </button>
+      <button  mat-mini-fab class = "matButtonClass" (click) = "sendEmail()">
+        <mat-icon>email</mat-icon>
       </button>
     </mat-toolbar>
 </p>
