@@ -20,4 +20,7 @@ export class ToolbarComponent {
   redirect(){
     window.location.href = "https://www.facebook.com/"
   }
+  sendEmail(){
+    window.open("mailto:robert961@me.com")
+  }
 }
